@@ -14,19 +14,25 @@ function userInput() {
         console.log("name is invalid");
     }
     
-    
-    if (userEmail.includes("gmail") || userEmail.includes("yahoo")) {
-        console.log("mail is valid");
-    } else {
-        console.log("mail is not valid");
-    }
+        if (userEmail == /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) {
+            if (userEmail.includes("gmail") || userEmail.includes("yahoo")) {
+                console.log("mail is valid");
+            } else{
+                console.log("please entre valid email");
+            }
+        }
+    // if (userEmail.includes("gmail") || userEmail.includes("yahoo")) {
+    //     console.log("mail is valid");
+    // } else {
+    //     console.log("mail is not valid");
+    // }
 
     if (userBio.length >= 50 ) {
         console.log("you are eligible");
     } else {
         console.log("you are not eligible");
     }
-
+    
     if (userCnic.length == 13) {
         console.log("cinc is correct");
     } else {
